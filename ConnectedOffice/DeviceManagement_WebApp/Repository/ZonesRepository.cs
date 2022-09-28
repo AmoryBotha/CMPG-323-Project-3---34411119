@@ -13,10 +13,10 @@ namespace DeviceManagement_WebApp.Repository
         public ZonesRepository(ConnectedOfficeContext context) : base(context)
         {
         }
-
         public Zone GetMostRecentCategory()
         {
             return _context.Zone.OrderByDescending(zone => zone.DateCreated).FirstOrDefault();
         }
+
     }
 }

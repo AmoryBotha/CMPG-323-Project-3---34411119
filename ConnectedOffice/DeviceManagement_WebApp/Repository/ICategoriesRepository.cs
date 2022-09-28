@@ -9,9 +9,6 @@ namespace DeviceManagement_WebApp.Repository
 {
     public interface ICategoriesRepository : IGenericRepository<Category>
     {
-        Task FindAsync(Guid? id);
-        object FirstOrDefaultAsync(Func<object, bool> value);
         Category GetMostRecentCategory();
-        //Task SaveChangesAsync();
     }
 }
